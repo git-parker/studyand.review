@@ -1,11 +1,8 @@
 import { useState } from "react";
+import sets from "../setsData"
 
-function Card() {
-  const [cards, setCards] = useState([{front:"estudiar", back:"study", flipped:false},
-                                      {front:"frijoles", back:"bean", flipped:false},
-                                      {front:"caminar", back:"walk", flipped:false},
-                                      {front:"cabeza inclinada", back:"tilted head", flipped:false}
-                                    ])
+function Card({id}) {
+  const [cards, setCards] = useState(sets.find((set) => set.id === id).setCards)
   const [frontInput, setFrontInput] = useState("")
   const [backInput, setBackInput] = useState("")
   const [currentIndex, setCurrentIndex] = useState(0)

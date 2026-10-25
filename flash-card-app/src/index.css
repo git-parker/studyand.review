@@ -6,8 +6,14 @@
   --hover-border-color: hsl(0, 0%, 27%);
 }
 
+a {
+  text-decoration: none;
+}
 
 
+p, h1, h2, h3{
+  color: hsl(60, 7%, 97%);
+}
 
 body {
   background-color: var(--background-color);
@@ -43,7 +49,9 @@ button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: 0.1s all;
 }
+
 
 #card p {
   font-family: Arial, Helvetica, sans-serif;
@@ -83,4 +91,15 @@ input:focus {
   font-weight: bold;
   width: 40px;
   height: 40px;
+}
+
+.set {
+  border: 2px solid var(--border-color);
+  border-radius: 10px;
+  padding: 10px;
+  transition: all 0.1s;
+}
+
+.set:hover {
+  border-color: var(--hover-border-color);
 }
