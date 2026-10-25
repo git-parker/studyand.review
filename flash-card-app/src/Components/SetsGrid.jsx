@@ -1,9 +1,10 @@
-import { useState } from "react"
+import { useState, useContext } from "react"
+import { SetsContext } from "../App";
 import { Link } from "react-router-dom"
-import sets from "../setsData"
 
 function SetsGrid() {
 
+  const sets = useContext(SetsContext).sets;
 
   const renderedSets = sets.map((set, index) => {
     return(

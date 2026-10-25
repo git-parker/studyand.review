@@ -1,11 +1,26 @@
-import { useState } from "react";
-import sets from "../setsData"
+import { useState, useContext, useEffect } from "react"
+import { SetsContext } from "../App";
 
 function Card({id}) {
+
+  const sets = useContext(SetsContext).sets;
+  const setSets = useContext(SetsContext).setSets;
+
+  const [varSets, setVarSets] = useState(sets)
   const [cards, setCards] = useState(sets.find((set) => set.id === id).setCards)
   const [frontInput, setFrontInput] = useState("")
   const [backInput, setBackInput] = useState("")
   const [currentIndex, setCurrentIndex] = useState(0)
+
+  useEffect(() => {
+    setSets(s => s.map(set => {
+        if(set.id === id) {
+          return {...set, setCards: cards}
+        } else {
+          return set
+        }
+    }))
+  }, [cards])
 
   function addNewCard() {
     //creating new card from input values

@@ -1,4 +1,4 @@
-const sets = [
+const templateSets = [
     {
       id:"1",
       title: "Español",
@@ -36,4 +36,4 @@ const sets = [
     }
   ]
 
-  export default sets
+  export default templateSets

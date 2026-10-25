@@ -6,7 +6,7 @@ function Flashcard() {
 
   return(
     <main>
-      <Card id={id}/>
+      <Card id={id} sets={sets}/>
     </main>
   )
 }
