@@ -6,8 +6,8 @@ function Card() {
                                       {front:"caminar", back:"walk", flipped:false},
                                       {front:"cabeza inclinada", back:"tilted head", flipped:false}
                                     ])
-  const [frontInput, setFrontInput] = useState("Front Side")
-  const [backInput, setBackInput] = useState("Back Side")
+  const [frontInput, setFrontInput] = useState("")
+  const [backInput, setBackInput] = useState("")
   const [currentIndex, setCurrentIndex] = useState(0)
 
   function addNewCard() {
@@ -52,11 +52,9 @@ function Card() {
 
   return(
     <div>
-      <div>
-        <label>Front:</label>
-        <input value={frontInput} onChange={(e) => setFrontInput(e.target.value)}/>
-        <label>Back:</label>
-        <input value={backInput} onChange={(e) => setBackInput(e.target.value)}/>
+      <div id="inputs">
+        <input placeholder="Front Text" value={frontInput} onChange={(e) => setFrontInput(e.target.value)}/>
+        <input placeholder="Back Text" value={backInput} onChange={(e) => setBackInput(e.target.value)}/>
         <button onClick={addNewCard}>Add</button>
       </div>
       <div id="card-container">

@@ -1,13 +1,86 @@
+:root {
+  --background-color: hsl(0, 0%, 7%);
+  --text-color: hsl(60, 7%, 97%);
+  --div-color: hsl(0, 0%, 12%);
+  --border-color: hsl(0, 0%, 15%);
+  --hover-border-color: hsl(0, 0%, 27%);
+}
+
+
+
+
+body {
+  background-color: var(--background-color);
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+  color: var(--text-color);
+  font-family: Arial;
+}
+
+button {
+  border: 2px solid var(--border-color);
+  border-radius: 10px;
+  background-color: var(--div-color);
+  color: var(--text-color);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.1s border-color;
+}
+
+button:hover {
+  border: 2px solid var(--hover-border-color);
+}
+
 #card {
-  border: 1px solid red;
-  height: 100px;
-  width: 200px;
+  background-color: var(--div-color);
+  border: 2px solid var(--border-color);
+  border-radius: 10px;
+  color: var(--text-color);
+  height: 200px;
+  width: 400px;
   margin: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+#card p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+#inputs {
+  display: flex;
+  justify-content: center;
+}
+
+input {
+  border: 2px solid var(--border-color);
+  border-radius: 10px;
+  background-color: var(--div-color);
+  color: var(--text-color);
+  font-size: 1rem;
+  padding: 3px;
+  margin: 5px;
+  transition: 0.1s border-color;
+}
+
+
+input:focus {
+  outline: none;
+  border-color: var(--hover-border-color);
+}
+
 #card-container {
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#card-container button {
+  font-weight: bold;
+  width: 40px;
+  height: 40px;
 }
