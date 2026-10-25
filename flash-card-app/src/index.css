@@ -1,0 +1,13 @@
+#card {
+  border: 1px solid red;
+  height: 100px;
+  width: 200px;
+  margin: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#card-container {
+  display: flex;
+}
