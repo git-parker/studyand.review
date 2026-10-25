@@ -6,9 +6,9 @@ function SetsGrid() {
 
   const sets = useContext(SetsContext).sets;
 
-  const renderedSets = sets.map((set, index) => {
+  const renderedSets = sets.map((set) => {
     return(
-      <Link to={`/card/${set.id}`}>
+      <Link to={`/card/${set.id}`} key={set.id}>
         <div className="set">
         <h1>{set.title}</h1>
         <p>{set.desc}</p>
