@@ -10,7 +10,7 @@ export const SetsContext = createContext()
 
 function App() {
 
-  const [sets, setSets] = useState(templateSets)
+  const [sets, setSets] = useState(JSON.parse(localStorage.getItem('sets')) || templateSets)
 
   return (
     <SetsContext.Provider value={{sets, setSets}}>

@@ -6,7 +6,6 @@ function Card({id}) {
   const sets = useContext(SetsContext).sets;
   const setSets = useContext(SetsContext).setSets;
 
-  const [varSets, setVarSets] = useState(sets)
   const [cards, setCards] = useState(sets.find((set) => set.id === id).setCards)
   const [frontInput, setFrontInput] = useState("")
   const [backInput, setBackInput] = useState("")
@@ -20,6 +19,8 @@ function Card({id}) {
           return set
         }
     }))
+
+    localStorage.setItem('sets', JSON.stringify(sets));
   }, [cards])
 
   function addNewCard() {
