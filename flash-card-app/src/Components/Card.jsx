@@ -10,6 +10,7 @@ function Card({id}) {
   const [frontInput, setFrontInput] = useState("")
   const [backInput, setBackInput] = useState("")
   const [currentIndex, setCurrentIndex] = useState(0)
+  const [flipped, setFlipped] = useState(false)
 
   useEffect(() => {
     setSets(s => s.map(set => {
@@ -36,6 +37,9 @@ function Card({id}) {
   }
 
   function goToNextCard() {
+
+    setFlipped(false)
+
     if(currentIndex >= cards.length-1) {
       setCurrentIndex(0)
     } else {
@@ -45,6 +49,9 @@ function Card({id}) {
   }
 
   function goToPrevCard() {
+
+    setFlipped(false)
+
     if(currentIndex <= 0) {
       setCurrentIndex(cards.length-1)
     } else {
@@ -54,13 +61,7 @@ function Card({id}) {
   }
 
   function flipCard() {
-    setCards(cards.map((card, index) => {
-      if(index===currentIndex) {
-        return {...card, flipped:!card.flipped}
-      } else {
-        return card
-      }
-    }))
+    setFlipped(!flipped)
   }
 
   return(
@@ -74,7 +75,7 @@ function Card({id}) {
         <button onClick={goToPrevCard}>&lt;</button>
         <div id="card" onClick={flipCard}>
           <p>
-            {cards[currentIndex].flipped ? 
+            {flipped ? 
              cards[currentIndex].back : cards[currentIndex].front}
           </p>
         </div>

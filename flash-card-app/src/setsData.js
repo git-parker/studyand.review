@@ -4,10 +4,10 @@ const templateSets = [
       title: "Español",
       desc: "Flashcards for random Spanish words",
       setCards: [
-        {front:"estudiar", back:"study", flipped:false},
-        {front:"frijoles", back:"bean", flipped:false},
-        {front:"caminar", back:"walk", flipped:false},
-        {front:"cabeza inclinada", back:"tilted head", flipped:false}
+        {front:"estudiar", back:"study"},
+        {front:"frijoles", back:"bean"},
+        {front:"caminar", back:"walk"},
+        {front:"cabeza inclinada", back:"tilted head"}
       ]
     },
 
@@ -16,10 +16,10 @@ const templateSets = [
       title: "AP Euro",
       desc: "Flashcards for ch.1-4",
       setCards: [
-        {front:"Martin Luther", back:"Protestant", flipped:false},
-        {front:"Leonardo Da Vinci", back:"Artist of Rennaisance", flipped:false},
-        {front:"Catherine de Medici", back:"A queen of France during Wars of Religon", flipped:false},
-        {front:"Europe", back:"place", flipped:false}
+        {front:"Martin Luther", back:"Protestant"},
+        {front:"Leonardo Da Vinci", back:"Artist of Rennaisance"},
+        {front:"Catherine de Medici", back:"A queen of France during Wars of Religon"},
+        {front:"Europe", back:"place"}
       ]
     },
 
@@ -28,10 +28,10 @@ const templateSets = [
       title: "Food",
       desc: "Random Food",
       setCards: [
-        {front:"apple", back:"fruit", flipped:false},
-        {front:"steak", back:"protein", flipped:false},
-        {front:"milk", back:"dairy", flipped:false},
-        {front:"banana", back:"fruit", flipped:false}
+        {front:"apple", back:"fruit"},
+        {front:"steak", back:"protein"},
+        {front:"milk", back:"dairy"},
+        {front:"banana", back:"fruit"}
       ]
     }
   ]
