@@ -1,4 +1,5 @@
 import SetsGrid from "../Components/SetsGrid"
+import { Link } from "react-router-dom"
 
 function Sets({sets}) {
 
@@ -7,6 +8,7 @@ function Sets({sets}) {
     <main>
       <h1>Study & Review Pre-Alpha</h1>
       <SetsGrid/>
+      <Link to="/createset"><button>+</button></Link>
     </main>
   )
 }

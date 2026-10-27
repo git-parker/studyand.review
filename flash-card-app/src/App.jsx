@@ -3,6 +3,7 @@ import { HashRouter as Router, Routes, Route } from 'react-router-dom'
 //pages
 import Sets from './Pages/Sets'
 import Flashcard from './Pages/Flashcard'
+import CreateSet from './Pages/CreateSet'
 import { useState, createContext } from 'react'
 import templateSets from './setsData'
 
@@ -19,6 +20,7 @@ function App() {
           <Route path="/" element={<Sets/>}/>
           <Route path="/sets" element={<Sets/>}/>
           <Route path="/card/:id" element={<Flashcard/>}/>
+          <Route path="/createset" element={<CreateSet/>}/>
         </Routes>
       </Router>
     </SetsContext.Provider>
